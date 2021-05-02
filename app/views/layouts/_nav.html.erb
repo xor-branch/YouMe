@@ -1,9 +1,23 @@
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
   <h5 class="my-0 mr-md-auto font-weight-normal">Fresh</h5>
+
+  <% if account_signed_in? %>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <%= link_to "Browse", browse_path, class:"text-dark mr-2" %>
+      <%= link_to "My Mactches", "#", class:"text-dark mr-2" %>
+      <%= link_to "Settings", "#", class:"text-dark mr-1" %>
+    </nav>
+    <%= link_to "Deconnecter", destroy_account_session_path, method: :delete, class:"btn btn-secondary mr-2" %>
+
+  <% else %>
     <nav class="my-2 my-md-0 mr-md-3">
       <a class="p-2 text-dark" href="#">Features</a>
       <a class="p-2 text-dark" href="#">Enterprise</a>
       <a class="p-2 text-dark" href="#">Support</a>
       <a class="p-2 text-dark" href="#">Pricing</a>
+      <%= link_to "se connecter", new_account_session_path, class:"btn btn-primary mr-2" %>
+      <%= link_to "s'inscrire", new_account_registration_path, class:"btn btn-outline-primary" %>
     </nav>
+
+    <% end %>
 </div>
