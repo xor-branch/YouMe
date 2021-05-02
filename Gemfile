@@ -27,8 +27,10 @@ gem 'coffee-rails', '~> 4.2'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
+
 gem "aws-sdk-s3", require: false
 # Use ActiveStorage variant
+gem 'activestorage'
 gem 'mini_magick', '~> 4.8'
 gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment

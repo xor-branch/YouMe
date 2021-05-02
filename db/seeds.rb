@@ -9,7 +9,7 @@
 
 Account.create([
   {first_name: "sarah", last_name: "james", username: "sarahj", email: "sarah@gmail.com", password: "password"},
-  {first_name: "Melanie", last_name: "Hart", username: "MelanieH", email: "emily@gmail.com", password: "password"},
+  {first_name: "Emily", last_name: "Hart", username: "EmilyH", email: "emily@gmail.com", password: "password"},
   {first_name: "Melanie", last_name: "Hunt", username: "Melanie1", email: "Melanie@gmail.com", password: "password"},
   {first_name: "Caroline", last_name: "Simpson", username: "Caroline1", email: "caroline@gmail.com", password: "password"},
   {first_name: "Bridget", last_name: "Smith", username: "Bridget1", email: "Bridget@gmail.com", password: "password"},

@@ -21,10 +21,10 @@ these make the slideshow work
     opacity: 0;
     z-index: 1;
 
-    font-size: 40px;
-    padding: 40px;
+    //font-size: 40px;
+    //padding: 40px;
     box-sizing: border-box;
-    background: #333;
+    //background: #333;
     color: #fff;
 
     -webkit-transition: opacity 1s;
@@ -47,7 +47,28 @@ these make the slideshow work
   }
 }
 
+.image-carousel {
+  border-radius: 5px;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
+.user-details{
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -120px;
+  font-size: 18px;
+  .user-name {
+    font-size: 20px;
+
+  }
+}
+/*
 .slide:nth-of-type(1) {
     background: red;
 }
@@ -63,3 +84,4 @@ these make the slideshow work
 .slide:nth-of-type(5) {
     background: purple;
 }
+*/
