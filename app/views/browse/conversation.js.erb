@@ -1,0 +1,6 @@
+$("#conversation").html("<%= escape_javascript(render partial: 'browse/conversation') %>").show();
+
+//cacher un element du dom au click
+$("#close-conversation").on("click", function(){
+    $("#conversation").hide();
+  });

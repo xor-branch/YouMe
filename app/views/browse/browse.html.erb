@@ -43,31 +43,8 @@
           <span id="decline"><i class="fa fa-times-circle fa-2x"></i></span>
           <span id="approve"><i class="fa fa-heart fa-2x"></i></span>
         </div>
-      </div>
-    </div>
+        <div id="conversation">
 
-    <div id="conversation">
-      <div class="row">
-        <div class="col-12 top-bar">
-          <%= link_to image_tag(@users.first.images.first, width:"40px", height:"40px", class:"float-left profile-thumb rounded-circle mr-3"),"#" %>
-          <span><%= @user.first.first_name %></span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <p>You matched with <span><%= @user.first.first_name %></span><%= time_age_in_words @users.first.created_at %></p>
-          <%= link_to image_tag(@users.first.images.first, width:"200px", height:"200px", class:"rounded-circle"),"#" %>
-          <p>Envoie lui un message et fait le/la sourire :)</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <form>
-            <div class="form-group">
-              <input type="text" name="" value="" placeholder="Tapez ici votre message et cliquez sur envoyer">
-              <input type="submit" name="submit" value="Envoyer" class="btn btn-succcess">
-            </div>
-          </form>
         </div>
       </div>
     </div>

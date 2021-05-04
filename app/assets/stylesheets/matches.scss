@@ -14,11 +14,31 @@
 }
 
 #conversation {
-  width: 400px;
-  height: 400px
-  position:absolute;
-  right: 20px;
-  top: 20px;
+  display: none;
+  width: 95%;
+  height: 95%;
+  position: absolute;
+  left: 2%;
+  top: 2%;
+  padding: 30px;
   z-index:1000;
   background: #fff;
+
+  .top-bar {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  .bottom-bar{
+    border-top: 1px solid #ddd;
+    padding-top: 40px;
+    margin-top: 30px;
+  }
+  #close-conversation {
+    cursor: pointer;
+
+    &:hover {
+      color: #000 !important;
+    }
+  }
 }
