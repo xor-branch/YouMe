@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+
   before_action :configure_devise, if: :devise_controller?
 
   private

@@ -1,6 +1,7 @@
 class PublicController < ApplicationController
 
-
   def home
-  end 
+   redirect_to browse_path if account_signed_in?
+  end
+
 end

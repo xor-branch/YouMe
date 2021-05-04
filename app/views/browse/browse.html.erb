@@ -1,19 +1,73 @@
-<ul id="slides">
-  <% @users.each_with_index do |user, i| %>
-  <div class="slide <%= 'showing' if i == 0 %>" data-id="<%= user.id %>">
-    <div class="image-carousel" style="background-image: url('<%= url_for user.images.first %>')">
-    </div>
-      <div class="user-details">
-        <span class="user-name"><%= user.first_name %></span>, <small>25</small> <br>
-        <i class="fa fa-graduation-cap mr-1"></i> job/ studies <br>
-        <i class="fa fa-map-marker mr-2"></i> Localisation
+  <div class="row">
+      <div class="col-md-4 bg-white">
+          <%= render "layouts/profile_bar" %>
+            <ul class="nav nav-tinder-sidebar ml-4 mt-3 mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-matches" role="tab" aria-controls="pills-home" aria-selected="true">Matches</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-messages" role="tab" aria-controls="pills-profile" aria-selected="false">Messages</a>
+              </li>
+
+            </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane ml-2 fade show active" id="pills-matches" role="tabpanel" aria-labelledby="pills-home-tab">
+            <%= render 'browse/matches'%>
+          </div>
+          <div class="tab-pane fade" id="pills-messages" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <div class="col">
+              <p>No messages to display</p>
+            </div>
+          </div>
+
+        </div>
 
       </div>
-  </div>
-  <% end %>
-</ul>
+      <div class="col-9 col-md-8 ">
+        <ul id="slides">
+          <% @users.each_with_index do |user, i| %>
+          <div class="slide <%= 'showing' if i == 0 %>" data-id="<%= user.id %>">
+            <div class="image-carousel" style="background-image: url('<%= url_for user.images.first %>')">
+            </div>
+              <div class="user-details">
+                <span class="user-name"><%= user.first_name %></span>, <small>25</small> <br>
+                <i class="fa fa-graduation-cap mr-1"></i> job/ studies <br>
+                <i class="fa fa-map-marker mr-2"></i> Localisation
 
-<div id="slide-controls">
-  <span id="decline"><i class="fa fa-times-circle fa-2x"></i></span>
-  <span id="approve"><i class="fa fa-heart fa-2x"></i></span>
-</div>
+              </div>
+          </div>
+          <% end %>
+        </ul>
+
+        <div id="slide-controls">
+          <span id="decline"><i class="fa fa-times-circle fa-2x"></i></span>
+          <span id="approve"><i class="fa fa-heart fa-2x"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="conversation">
+      <div class="row">
+        <div class="col-12 top-bar">
+          <%= link_to image_tag(@users.first.images.first, width:"40px", height:"40px", class:"float-left profile-thumb rounded-circle mr-3"),"#" %>
+          <span><%= @user.first.first_name %></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p>You matched with <span><%= @user.first.first_name %></span><%= time_age_in_words @users.first.created_at %></p>
+          <%= link_to image_tag(@users.first.images.first, width:"200px", height:"200px", class:"rounded-circle"),"#" %>
+          <p>Envoie lui un message et fait le/la sourire :)</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <form>
+            <div class="form-group">
+              <input type="text" name="" value="" placeholder="Tapez ici votre message et cliquez sur envoyer">
+              <input type="submit" name="submit" value="Envoyer" class="btn btn-succcess">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>

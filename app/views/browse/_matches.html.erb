@@ -1,0 +1,9 @@
+<% @matches.each do |matche| %>
+  <div class="col-sm-4 mt-3">
+    <% if matche.images.attached? %>
+    <div class="match-title rounded" data-id="<%=matche.id %>" style="background-image: url('<%= url_for matche.images.first %>')">
+      <p class="text-white"><%= matche.first_name%></p>
+    </div>
+    <% end %>
+  </div>
+<% end %>

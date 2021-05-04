@@ -1,0 +1,24 @@
+.match-title{
+  width: 150px;
+  height: 150px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  position: relative;
+  p{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+  }
+}
+
+#conversation {
+  width: 400px;
+  height: 400px
+  position:absolute;
+  right: 20px;
+  top: 20px;
+  z-index:1000;
+  background: #fff;
+}
