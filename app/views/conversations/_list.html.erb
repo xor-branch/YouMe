@@ -1,16 +1,15 @@
 <% if @conversations.size > 0 %>
   <% @conversations.each do |conversation| account = get_account_from_conversation(conversation) %>
-
-  <div class="row">
-    <div class="col open_conversation" data-id="<%= account.id %>">
-      <%= profile_thumbnail account %>
-      <strong><%= account.first_name %></strong>
-      <%= simple_format conversation.messages.last.body %>
-    </div>
-  </div>
-
+      <% if account.present? %>
+        <div class="row">
+          <div class="col open_conversation" data-id="<%= account.id %>">
+            <%= profile_thumbnail account %>
+            <strong><%= account.first_name %></strong>
+            <%= simple_format conversation.messages.last.body %>
+          </div>
+        </div>
+      <% end %>
   <% end %>
-
 <% else %>
   <p>No messages to display</p>
 <% end %>

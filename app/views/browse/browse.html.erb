@@ -26,16 +26,25 @@
       <div class="col-9 col-md-8 ">
         <ul id="slides">
           <% @users.each_with_index do |user, i| %>
-          <div class="slide <%= 'showing' if i == 0 %>" data-id="<%= user.id %>">
+          <li class="slide <%= 'showing' if i == 0 %>" data-id="<%= user.id %>">
             <div class="image-carousel" style="background-image: url('<%= url_for user.images.first %>')">
             </div>
               <div class="user-details">
-                <span class="user-name"><%= user.first_name %></span>, <small>25</small> <br>
-                <i class="fa fa-graduation-cap mr-1"></i> job/ studies <br>
-                <i class="fa fa-map-marker mr-2"></i> Localisation
+                <div class="user-infos">
+                  <span class="user-name"><%= user.first_name %></span>, <small>25</small> <br>
+                  <i class="fa fa-graduation-cap mr-1"></i>education/job <%#= user.education %> <br>
+                  <i class="fa fa-map-marker mr-2"></i> location<%#= user.location %>
+                </div>
 
+                <span class="profile-info fa-stack float-right">
+                  <i class="fa fa-circle text-white fa-stack-2x"></i>
+                  <i class="fa fa-info text-dark fa-stack-1x"></i>
+                </span>
               </div>
-          </div>
+              <div class="more-details tex-dark">
+                <%= simple_format user.description %>
+              </div>
+          </li>
           <% end %>
         </ul>
 

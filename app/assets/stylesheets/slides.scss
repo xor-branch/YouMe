@@ -40,14 +40,22 @@ these make the slideshow work
 
 
 #slide-controls {
+  position: relative;
+  z-index: 1000;
   margin: 70px 0 400px;
   text-align: center;
+
+  &.open {
+    margin-top: 250px;
+
+  }
   span {
     margin: 0 10px;
   }
 }
 
 .image-carousel {
+  position: relative;
   border-radius: 5px;
   width: 300px;
   height: 400px;
@@ -68,6 +76,31 @@ these make the slideshow work
     font-size: 20px;
 
   }
+}
+
+.user-details .profile-info {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  cursor: pointer;
+}
+
+.user-infos {
+  width: 200px;
+}
+
+.more-details {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 550px;
+  left:26%;
+  width: 300px;
+  margin-top: -150px;
+  padding: 20px;
+  overflow-x: scroll;
+  color: #e3e3e3;
+  background: #fff;
 }
 /*
 .slide:nth-of-type(1) {

@@ -12,6 +12,14 @@ $(function(){
     });
   });
 
+$(".profile-info").on("click", function() {
+  var $details = $(this).closest(".slide").find(".more-details");
+
+  $details.toggle();
+  $("#slide-controls").toggleClass("open")
+});
+
+
   $(".open_conversation").on("click", function(){
     var account_id = $(this).data("id");
 

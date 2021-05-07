@@ -17,11 +17,23 @@
         </div>
         <div class="form-group">
           <%= f.label :first_name %><br />
-          <%= f.text_field :first_name, autofocus: true, autocomplete: "firstName", class:"form-control" %>
+          <%= f.text_field :first_name, autofocus: true, class:"form-control" %>
         </div>
         <div class="form-group">
           <%= f.label :last_name %><br />
-          <%= f.text_field :last_name, autofocus: true, autocomplete: "lastName", class:"form-control" %>
+          <%= f.text_field :last_name, autofocus: true, class:"form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :location %><br />
+          <%= f.text_field :location, autofocus: true,  class:"form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :description %><br />
+          <%= f.text_area :description, autofocus: true, class:"form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :education %><br />
+          <%= f.text_field :education, autofocus: true, autocomplete: "education", class:"form-control" %>
         </div>
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
