@@ -40,8 +40,14 @@
         </ul>
 
         <div id="slide-controls">
-          <span id="decline"><i class="fa fa-times-circle fa-2x"></i></span>
-          <span id="approve"><i class="fa fa-heart fa-2x"></i></span>
+          <div id="decline" class="d-inline-block fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x text-white"></i>
+            <i class="fa fa-times fa-stack-1x text-danger"></i>
+          </div>
+          <div id="approve" class="d-inline-block fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x text-white"></i>
+            <i class="fa fa-heart fa-stack-1x text-success"></i>
+          </div>
         </div>
         <div id="conversation">
         </div>

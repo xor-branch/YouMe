@@ -1,16 +1,24 @@
 .match-title{
-  width: 150px;
-  height: 150px;
+  width: 135px;
+  height: 135px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
+  background-color: #ddd;
   position: relative;
   p{
     position: absolute;
     bottom: 15px;
     left: 15px;
   }
+}
+
+.open_conversation {
+  background: #cfcfcf;
+  border-bottom: 1px solid #ddd;
+  padding-top: 20px;
+  cursor: pointer;
 }
 
 #conversation {

@@ -34,6 +34,10 @@ these make the slideshow work
     z-index: 2;
 }
 
+#decline, #approve {
+  cursor: pointer;
+}
+
 
 #slide-controls {
   margin: 70px 0 400px;
@@ -51,6 +55,7 @@ these make the slideshow work
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-color: #ddd;
 }
 
 .user-details{

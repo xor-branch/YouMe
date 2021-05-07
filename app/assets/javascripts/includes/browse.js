@@ -12,6 +12,18 @@ $(function(){
     });
   });
 
+  $(".open_conversation").on("click", function(){
+    var account_id = $(this).data("id");
+
+    $.ajax({
+      url: "/get/conversation/"+account_id,
+      method: "post",
+      beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+      dataType: "script"
+    });
+  });
+
+
   $("#decline").on("click", function(){
     var user_id = $activeSlide.data("id");
 
