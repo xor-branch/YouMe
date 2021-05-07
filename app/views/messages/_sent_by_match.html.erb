@@ -1,0 +1,10 @@
+<div class="row mb-2">
+  <div class="col-sm-2 col-lg-1 text-right">
+    <%= image_tag message.account.images.first, class:"rounded-circle",width:"40px", height:"40px" if message.account.images.any? %>
+  </div>
+  <div class="col-sm-10 col-lg-11">
+    <div class="float-left p-2 rounded conversation-message">
+        <%= simple_format message.body %>
+    </div>
+  </div>
+</div>

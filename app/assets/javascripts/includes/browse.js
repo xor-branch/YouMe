@@ -13,6 +13,15 @@ $(function(){
   });
 
   $("#decline").on("click", function(){
+    var user_id = $activeSlide.data("id");
+
+    $.ajax({
+      url: "/decline/" + user_id,
+      type: "post",
+      beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+      dataType: "ajax"
+    });
+
     goToSlide('decline')
   });
 

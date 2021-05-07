@@ -34,6 +34,19 @@
     padding-top: 40px;
     margin-top: 30px;
   }
+
+  .conversation-message{
+    background: #f2f2f2;
+
+    p{
+      margin: 0;
+    }
+  }
+  .sent-by-me {
+      .conversation-message {
+        background: #b3d7ff;
+      }
+  }
   #close-conversation {
     cursor: pointer;
 

@@ -4,7 +4,7 @@
   <div class="input-group">
     <%= form.fields_for :messages, @message do |message_form|%>
       <%= message_form.hidden_field :account_id, value: current_account.id %>
-      <%= message_form.text_field :body, placeholder:"Tapez ici votre message et cliquez sur envoyer", class:"form-control form-control-lg"%>
+      <%= message_form.text_field :body, placeholder:"Tapez ici votre message et cliquez sur envoyer", id:"message-input" ,class:"form-control form-control-lg"%>
     <% end %>
     <div class="input-group-append">
       <input type="submit" name="submit" value="Envoyer" class="btn btn-success btn-lg pl-5 pr-5">

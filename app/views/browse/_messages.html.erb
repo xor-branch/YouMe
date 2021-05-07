@@ -1,3 +1,9 @@
 <% @messages.each do |message| %>
-  <%= simple_format message.body %>
+  <% if message.persisted? %>
+    <% if message.account_id == current_account.id %>
+      <%= render partial: "messages/sent_by_me", locals: { message: message } %>
+    <% else %>
+      <%= render partial: "messages/sent_by_match", locals: { message: message } %>
+    <% end %>
+  <% end %>
 <% end %>
